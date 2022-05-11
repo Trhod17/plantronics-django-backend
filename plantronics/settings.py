@@ -317,7 +317,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-#STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = 'staticfiles'
 
 # this is directory paths where you have to put your project level static files
 # you can put multiple folders here
