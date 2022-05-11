@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{g+gp+gpVirtualEnv}{(env)} \PYG{g+gp}{[trhod17@k9 django\PYGZhy{}tafe]\PYGZdl{} }python manage.py runserver
+\PYG{g+go}{Watching for file changes with StatReloader}
+\PYG{g+go}{Performing system checks...}
+\PYG{g+go}{System check identified no issues (0 silenced). April 03, 2022 \PYGZhy{} 08:10:55}
+\PYG{g+go}{Django version 4.0.3, using settings ‘plantronics.settings’}
+\PYG{g+go}{Starting development server at http://127.0.0.1:8000/}
+\PYG{g+go}{Quit the server with CONTROL\PYGZhy{}C.}
+\end{Verbatim}

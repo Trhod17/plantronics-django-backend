@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{g+go}{        \PYGZsq{}rest\PYGZus{}framework\PYGZus{}json\PYGZus{}api.filters.QueryParameterValidationFilter\PYGZsq{}}
+\PYG{g+go}{        \PYGZsq{}django.contrib.auth.password\PYGZus{}validation.UserAttributeSimilarityValidator\PYGZsq{}}
+\PYG{g+go}{        \PYGZsq{}django.contrib.auth.password\PYGZus{}validation.MinimumLengthValidator\PYGZsq{}}
+\PYG{g+go}{        \PYGZsq{}django.contrib.auth.password\PYGZus{}validation.CommonPasswordValidator\PYGZsq{}}
+\PYG{g+go}{        \PYGZsq{}django.contrib.auth.password\PYGZus{}validation.NumericPasswordValidator\PYGZsq{}}
+\PYG{g+go}{        \PYGZsq{}django.contrib.auth.middleware.AuthenticationMiddleware\PYGZsq{}}
+\PYG{g+go}{        \PYGZsq{}django.contrib.sessions.middleware.SessionMiddleware\PYGZsq{}}
+\PYG{g+go}{        \PYGZsq{}django.middleware.security.SecurityMiddleware\PYGZsq{}}
+\end{Verbatim}

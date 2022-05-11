@@ -1,0 +1,29 @@
+\babel@toc {english}{}\relax 
+~\hfill \textbf {Page}\par 
+\contentsline {part}{ A\hspace {1em}Implementation}{3}{part.1}%
+\contentsline {section}{\numberline {1}Web Service That Supports at Least Four Unique Get and Post Actions}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Terminal Outputs for Post Requests:}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Build a correctly formed database to implement the \\specifications of Proj1}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Defining the Database Tables}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Generated Database Tables}{10}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Integrating with a Back-end Database}{11}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Logging Feature That Records IP, Session, Username, Usertype, Date, and Action for Each Request.}{16}{section.3}%
+\contentsline {section}{\numberline {4}Rate Limit Session Requests to 1000 per 24 hours per session}{18}{section.4}%
+\contentsline {section}{\numberline {5}Domain Locking Web Service to Whitelisted Referrers}{20}{section.5}%
+\contentsline {part}{ B\hspace {1em}Code Structure}{22}{part.2}%
+\contentsline {section}{\numberline {6}Custom Written Database Option}{22}{section.6}%
+\contentsline {section}{\numberline {7}use request, response and session objects rather then their superglobals}{24}{section.7}%
+\contentsline {section}{\numberline {8}Use at least three http response codes including 200}{25}{section.8}%
+\contentsline {section}{\numberline {9}Response Data}{26}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Validation of GET and POST data before it is serialized or processed by an object}{26}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}POST Requests}{26}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}GET Requests}{26}{subsubsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.3}Additional Validation}{27}{subsubsection.9.1.3}%
+\contentsline {subsection}{\numberline {9.2}Response Format}{27}{subsection.9.2}%
+\contentsline {part}{ C\hspace {1em}Code Comments}{30}{part.3}%
+\contentsline {section}{\numberline {10}Explain why you created the database and session objects in that particular location}{30}{section.10}%
+\contentsline {section}{\numberline {11}Explain the arithmetic behind one of your rate-limiting codes}{31}{section.11}%
+\contentsline {section}{\numberline {12}Note where you're testing to see if a session already exists and what you'll do if it does}{31}{section.12}%
+\contentsline {section}{\numberline {13}Describe the code structure that verifies all GET/POST structures}{32}{section.13}%
+\contentsline {section}{\numberline {14}Write a README file that explains how to setup and configure this service}{34}{section.14}%
+\contentsline {section}{\numberline {15}As part of unit testing, create a test script that interacts with the web service to test all known GET and POST requests.}{34}{section.15}%

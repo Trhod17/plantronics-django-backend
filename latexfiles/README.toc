@@ -1,0 +1,21 @@
+\babel@toc {english}{}\relax 
+\contentsline {part}{I\hspace {1em}For Linux Users}{1}{part.1}%
+\contentsline {section}{\numberline {1}Python setup}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Check Python}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Installing Python}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Setting Up The Environment}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Getting The Source Code}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Setting Up Python Virtual Environment}{2}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Created New Python Virtual Environment}{3}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Run Django}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Proj 2 Specifications}{3}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Proj 2, 18}{3}{subsection.2.5}%
+\contentsline {part}{II\hspace {1em}For Windows Users}{3}{part.2}%
+\contentsline {section}{\numberline {3}Install Python}{4}{section.3}%
+\contentsline {section}{\numberline {4}Setup Environment}{4}{section.4}%
+\contentsline {section}{\numberline {5}Create And Setup Virtual Environment}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Create Virtual Environment}{4}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Setup Virtual Environment}{4}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Launching Django}{4}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Proj 2 Specifications}{5}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Proj 2, 18}{5}{subsection.5.5}%

@@ -1,0 +1,196 @@
+\documentclass{article}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{minted}
+\usemintedstyle{monokai}
+\usepackage[explicit]{titlesec}
+\usepackage{setspace}
+\usepackage[english]{babel}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\hypersetup{colorlinks,
+	linkcolor=green,
+	linktoc=all}
+
+\makeatletter % change only the display of \thepage, but not \thepage itself:
+\patchcmd{\ps@plain}{\thepage}{\textcolor{white}{\thepage}}{}{}
+\makeatother
+
+{\large }
+\titleformat{\section}
+{\normalfont\normalsize\bfseries\centering}{}{0em}{\MakeUppercase{#1}}
+
+\definecolor{bg}{HTML}{282828}
+
+\colorlet{LightRubineRed}{RubineRed!70}
+\colorlet{Mycolor1}{green!10!orange}
+\definecolor{Mycolor2}{HTML}{00F9DE}
+
+\setcounter{tocdepth}{3}
+
+
+
+\title{Instructions to setup and configure `Plantronixs' web service }
+\author{Thomas Rhodes}
+
+
+
+\begin{document}
+	\pagestyle{plain}
+	
+	\pagecolor{darkgray}
+	\color{white}%
+	\maketitle
+	
+	\tableofcontents
+	
+		
+	\begin{spacing}{2.5}
+	\end{spacing}
+	\part{For Linux Users}
+
+	\section{Python setup}
+		\subsection{Check Python}
+	Check to see if you have a compatible version of python installed, either by running
+	\mintinline[bgcolor=bg]{console}{$ python --version} or 
+	\mintinline[bgcolor=bg]{console}{$ python3 --version} 
+	if successful it should look something similar to the following.
+	\begin{minted}[bgcolor=bg]{bash}
+		[trhod17@k9 ~] $ python --version
+		Python 3.10.2  
+	\end{minted}
+	If if worked move to step 2, if not continue to step 1.2.
+	
+		\subsection{Installing Python}
+		
+		Install python by running the correct command for your distrobution
+		
+		\begin{description}
+			\item[Debian or Ubuntu based systems:]
+				\item\mintinline[bgcolor=bg]{console}|$ sudo apt install python3|
+			\item[Arch based systems:]
+				\item\mintinline[bgcolor=bg]{console}|$ sudo pacman -S python|
+				\item\mintinline[bgcolor=bg]{console}|$ sudo pamac install python|
+			\item[RHEL based systems:]
+				\item\mintinline[bgcolor=bg]{console}|$ sudo dnf install python3 |
+		\end{description}
+		
+		Once installed retry step 1.1 to make sure its installed properly
+	
+	\section{Setting Up The Environment}
+		\subsection{Getting The Source Code}
+			Go to \href{https://github.com/Trhod17/tafe_plant_water_timer_app_backend}{the Github repo (click here)} 
+			and Download as a ZIP, then extract to your desired location or clone the repo by using \\
+\mintinline[bgcolor=bg]{console}|$ git clone https://github.com/Trhod17/tafe_plant_water_timer_app_backend|
+		 
+		 \subsection{Setting Up Python Virtual Environment}	
+			 Now you can either create a new python virtual environment, \href{https://docs.python.org/3/tutorial/venv.html}{Guide Here}, or use the existing environment saved in the repo by running 
+			 \begin{description}
+			 	\item[For Bash Consoles]
+			 	\item\mintinline[bgcolor=bg]{console}|$ source django_tafe/bin/active |
+			 	\item[For Zsh and other consoles]
+			 	\item\mintinline[bgcolor=bg]{console}|$ . django_tafe/bin/active |
+			 \end{description}
+		 	in the folder containing the source code.
+		 	
+		  	\subsubsection{Created New Python Virtual Environment}
+		 		If you have chosen to create new python virtual environment you next step is to 
+		 		install the required packages by navigating to the directory containing the source code and running \newline \mintinline[bgcolor=bg]{console}|$ pip install -r requirements.txt|
+			
+			\subsection{Run Django}
+				Once you have finished the above steps run
+			\begin{minted}[bgcolor=bg]{console}
+(env) [trhod17@k9 django-tafe]$ python manage.py runserver 
+Watching for file changes with StatReloader 
+Performing system checks... 
+System check identified no issues (0 silenced). April 03, 2022 - 08:10:55 
+Django version 4.0.3, using settings ‘plantronics.settings’
+Starting development server at http://127.0.0.1:8000/ 
+Quit the server with CONTROL-C. 
+			\end{minted} 
+			And the website should now be accessible via http://127.0.0.1:8000
+		
+		\subsection{Proj 2 Specifications}
+			Please refer to the other pdf document located in the same directory as this file called RHODES\_459274825\_Proj2.pdf, on how to test this web service against the specifications for Proj 2, Examples are also given for clarity.
+			
+		\subsection{Proj 2, 18}
+			This step is for when you are up to number 18 in the other document,
+			go to roughly line 174, and change the value of `burst' rate to 100/second then save, open a new console in the project root directory and or in your IDE, open the python environment as specified above and run \mintinline[bgcolor=bg]{console}|$ pythom manage.py test|
+			and this should run 8 test cases which should each container 3 tests 
+	
+	
+	\begin{spacing}{3}
+	\end{spacing}
+	\part{For Windows Users}
+	
+	\begin{framed}
+		Disclaimer: \newline While the steps below SHOULD work, I do not own a windows machine, nor do i have a virtual machine setup to test these instructions
+		therefore it is of great preference to the author/ developer that this is ran in a Linux environment, as intended. This can be done within windows by installing a Linux distro as an App/program via WSL or by way of a virtual machine 
+	\end{framed}
+	
+	
+	\section{Install Python}
+	Go to \href{https://www.python.org/downloads/release/python-3104/}{www.python.org/downloads/release/python-3014/} and select the
+	appropriate installer for your version of Windows. Download and run the installer, This will install Python on your machine so that we may proceed.
+	
+	\section{Setup Environment}
+	Go to \href{https://github.com/Trhod17/tafe_plant_water_timer_app_backend}{the Github repo (click here)} and download as a ZIP and extract to
+	desire location, or use git clone to clone the repo and open in desired ide.
+	
+	\section{Create And Setup Virtual Environment}
+	
+	\subsection{Create Virtual Environment}
+
+	Now we must create a virtual environment, so activate a terminal in your IDE and type
+	\mintinline[bgcolor=bg]{console}|$ python -m venv env| or \mintinline[bgcolor=bg]{console}|$ python3 -m venv env|, you will see a new folder created called 'env', we need this so don't delete it. 
+	\newline
+	\newline
+	In a terminal within your IDE type the following command:
+	\mintinline[bgcolor=bg]{console}|$ env\bin\activate| to activate the Python Virtual Environment needed in order to setup this web service.
+	\newline
+	\newline
+	This Python Virtual Environment holds all the packages and dependencies necessary
+	for this web service to run, it works independently of any pre-existing globally
+	installed packages, as a self contained file system.
+	
+	\subsection{Setup Virtual Environment}
+	Now we must install all our package dependencies by typing into the terminal
+	\newline\mintinline[bgcolor=bg]{console}|$ pip install -r requirements.txt|.
+	
+	\subsection{Launching Django}
+	In the same terminal, with our (env), type \mintinline[bgcolor=bg]{console}|$python manage.py runserver| to start the web service. The web service will be accessible by default via http://127.0.0.1:8000. You should get a similar terminal readout to:
+
+		\begin{minted}[bgcolor=bg]{console}
+		(env) $ python manage.py runserver
+		Watching for file changes with StatReloader
+		Performing system checks...
+		
+		System check identified no issues (0 silenced).
+		April 03, 2022 - 08:10:55
+		Django version 4.0.3, using settings 'plantronics.settings'
+		Starting development server at http://127.0.0.1:8000/
+		Quit the server with CONTROL-C.
+	\end{minted}
+
+	\subsection{Proj 2 Specifications}
+	Please refer to the other pdf document located in the same directory as this file called RHODES\_459274825\_Proj2.pdf, on how to test this web service against the specifications for Proj 2, Examples are also given for clarity.
+	
+	\subsection{Proj 2, 18}
+	This step is for when you are up to number 18 in the other document,
+	go to roughly line 174, and change the value of `burst' rate to 100/second then save, open a new console in the project root directory and or in your IDE, open the python environment as specified above and run \mintinline[bgcolor=bg]{console}|$ pythom manage.py test|
+	and this should run 8 test cases which should each container 3 tests  
+	\newline
+	\newline
+	\newline
+	\newline
+
+	\begin{framed}
+			\centering END OF DOCUMENT.
+			\newline
+			\newline 
+			\centering THANKS FOR READING!
+	\end{framed}
+	
+\end{document}

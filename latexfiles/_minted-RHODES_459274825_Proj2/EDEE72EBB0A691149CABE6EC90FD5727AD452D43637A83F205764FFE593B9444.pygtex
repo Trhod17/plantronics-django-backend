@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n+nv}{Too} \PYG{n+nv}{Many} \PYG{n+nv}{Requests}\PYG{o}{:} \PYG{o}{/}
+    [\PYG{l+m}{16}\PYG{o}{/}\PYG{n+nv}{Apr}\PYG{o}{/}\PYG{l+m}{2022} \PYG{l+m}{02}\PYG{o}{:}\PYG{l+m}{16}\PYG{o}{:}\PYG{l+m}{57}] \PYG{l+s}{\PYGZdq{}GET / HTTP/1.1\PYGZdq{}} \PYG{l+m}{429} \PYG{l+m}{5413}
+\end{Verbatim}
