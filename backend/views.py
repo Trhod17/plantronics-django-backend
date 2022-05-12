@@ -185,7 +185,7 @@ def plantEdibles(request):
 
 
 @csrf_exempt
-@api_view(['get'])
+@api_view(['get', 'post'])
 def getPlants(request):
     if (request.method == 'GET'):
 
@@ -195,8 +195,18 @@ def getPlants(request):
         json_object = json.loads(json.dumps(list(get)))
 
         return JsonResponse({'plants': json_object}, status=200)
+    elif request.method == 'POST':
+        
+        data = JSONParser().parse(request)
+        print(data)
+        get = Plant.objects.filter(
+            id=data['id']).values('plant_name', 'plant_latin_name',
+                                               'plant_image', 'plant_description', 'family', 'genus', 'created_by__username')
+        json_object = json.loads(json.dumps(list(get)))
+
+        return JsonResponse({'plants': json_object}, status=200)
     else:
-        return JsonResponse({'message': 'post request not supported on this url'}, status=404)
+        return JsonResponse({'message': 'request not supported on this url'}, status=404)
 
 
 class UserViewSet(viewsets.ModelViewSet):
