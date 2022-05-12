@@ -192,13 +192,6 @@ BATON = {
 
 WSGI_APPLICATION = 'plantronics.wsgi.application'
 
-REST_SAFE_LIST_IPS = [
-    '127.0.0.1',
-    '123.32.32.14',
-    '127.0.0.1:3000',
-    '138.44.128.242'  # example ip
-]
-
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
@@ -337,7 +330,8 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
     'https://ec2-44-196-223-128.compute-1.amazonaws.com',
-    '138.44.128.242'
+    '138.44.128.242',
+    '172.30.211.17'
 ]
 
 REST_SAFE_LIST_IPS = [
@@ -346,7 +340,8 @@ REST_SAFE_LIST_IPS = [
     '192.168.0.',
     'localhost:3000',
     '127.0.0.1:3000',
-    '138.44.128.242'     # the local subnet, stop typing when subnet is filled out
+    '138.44.128.242',
+    '172.30.211.17'     # tafe address in an attempt to be able to connect to the backend
 ]
 
 #CORS_ORIGIN_ALLOW_ALL = True
