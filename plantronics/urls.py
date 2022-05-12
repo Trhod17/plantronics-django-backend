@@ -33,4 +33,5 @@ urlpatterns = [
     path('plantsoil/', views.plantSoil),
     path('plantedible/', views.plantEdibles),
     path('getplants/', views.getPlants),
+    path('myplants/', views.myPlants)
 ]

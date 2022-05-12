@@ -192,7 +192,6 @@ def getPlants(request):
 
         return JsonResponse({'plants': json_object}, status=200)
     elif request.method == 'POST':
-        
         data = JSONParser().parse(request)
         get = Plant.objects.filter(
             id=data['id']).values('plant_name', 'plant_latin_name',
@@ -202,6 +201,15 @@ def getPlants(request):
         return JsonResponse({'plants': json_object}, status=200)
     else:
         return JsonResponse({'message': 'request not supported on this url'}, status=404)
+
+
+@csrf_exempt
+def myPlants(request):
+    if (request.method == 'GET'):
+        get = UserPlant.objects.all().values('user__username', 'plant__plant_name')
+        json_object = json.loads(json.dumps(list(get)))
+
+        return JsonResponse({'userplants': json_object}, status=200)
 
 
 class UserViewSet(viewsets.ModelViewSet):
