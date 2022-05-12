@@ -97,7 +97,6 @@ def user(request):
 
 
 @csrf_exempt
-@api_view(['POST'])
 def plantInfo(request):
     if (request.method == 'POST'):
         data = JSONParser().parse(request)
@@ -124,7 +123,6 @@ def plantInfo(request):
 
 
 @csrf_exempt
-@api_view(['POST'])
 def plantSoil(request):
     if (request.method == 'POST'):
         data = JSONParser().parse(request)
@@ -148,7 +146,6 @@ def plantSoil(request):
 
 
 @csrf_exempt
-@api_view(['POST'])
 def plantEdibles(request):
     if (request.method == 'POST'):
         data = JSONParser().parse(request)
@@ -185,7 +182,6 @@ def plantEdibles(request):
 
 
 @csrf_exempt
-@api_view(['get', 'post'])
 def getPlants(request):
     if (request.method == 'GET'):
 
@@ -198,7 +194,6 @@ def getPlants(request):
     elif request.method == 'POST':
         
         data = JSONParser().parse(request)
-        print(data)
         get = Plant.objects.filter(
             id=data['id']).values('plant_name', 'plant_latin_name',
                                                'plant_image', 'plant_description', 'family', 'genus', 'created_by__username')
