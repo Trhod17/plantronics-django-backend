@@ -240,7 +240,6 @@ class PlantViewSet(viewsets.ModelViewSet):
     queryset = Plant.objects.all()
     serializer_class = PlantSerializer
     permission_classes = [permissions.IsAuthenticated]
-    lookup_field = 'plant_name'
 
 
 class FamilyViewSet(viewsets.ModelViewSet):
