@@ -344,8 +344,8 @@ REST_SAFE_LIST_IPS = [
     '172.30.211.17'     # tafe address in an attempt to be able to connect to the backend
 ]
 
-#CORS_ORIGIN_ALLOW_ALL = True
-#CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
     "DELETE",
     "GET",
