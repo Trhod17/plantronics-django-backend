@@ -245,32 +245,32 @@ REST_FRAMEWORK = {
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-
     'default': {
-
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-        'NAME': env('database'),
-
-        'USER': env('database_user'),
-
-        'PASSWORD': env('database_password'),
-
-        'HOST': env('database_host'),
-
-        'PORT': env('database_port'),
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-
 }
+
+# DATABASES = {
+
+#     'default': {
+
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+#         'NAME': env('database'),
+
+#         'USER': env('database_user'),
+
+#         'PASSWORD': env('database_password'),
+
+#         'HOST': env('database_host'),
+
+#         'PORT': env('database_port'),
+
+#     }
+
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -329,9 +329,10 @@ CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:3000',
     'http://localhost:8000',
     'http://127.0.0.1:8000',
-    'https://ec2-44-196-223-128.compute-1.amazonaws.com',
-    '138.44.128.242',
-    '172.30.211.17'
+    'http://138.44.128.242',
+    'http://172.30.211.17',
+    'https://138.44.128.242',
+    'https://172.30.211.17'
 ]
 
 REST_SAFE_LIST_IPS = [
