@@ -193,6 +193,7 @@ WSGI_APPLICATION = 'plantronics.wsgi.application'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
+		'rest_framework.authentication.SessionAuthentication',
     ),
     'EXCEPTION_HANDLER': 'requestlogs.views.exception_handler',
     'DEFAULT_PAGINATION_CLASS':
