@@ -48,13 +48,13 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'backend',
     'baton.autodiscover',
-    'ip_logger',
     'corsheaders',
     'django_otp',
     'django_otp.plugins.otp_totp',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+	'django_audit_log_middleware',
 ]
 
 MIDDLEWARE = [
@@ -65,10 +65,9 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'ip_logger.middleware.LogIPMiddleware',
-    'requestlogs.middleware.RequestLogsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django_otp.middleware.OTPMiddleware',
+	'django_audit_log_middleware.AuditLogMiddleware',
 ]
 
 CLOUDINARY_STORAGE = {
