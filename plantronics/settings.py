@@ -38,9 +38,10 @@ OTP_TOTP_ISSUER = 'Plantronics'
 # Application definition
 
 INSTALLED_APPS = [
+    # Admin Interface
     'baton',
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth', # core authentication framework
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -55,12 +56,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
 	'django_audit_log_middleware',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_simple_ip_restrict.middleware.ip_filter',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -353,6 +356,14 @@ CORS_ALLOW_METHODS = [
     "PATCH",
     "POST",
     "PUT",
+]
+
+IP_PROTECTED_NAMESPACES = ["admin"]
+IP_NETWORKS_WHITELIST = [
+    '127.0.0.1',
+    '192.168.0',
+    '127.0.0.1',
+    '127.0.0.1'
 ]
 
 import django_heroku

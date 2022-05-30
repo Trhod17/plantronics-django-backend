@@ -1,12 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
-
+from django.core.validators import MinValueValidator, MinLengthValidator, MaxValueValidator, MaxLengthValidator, FileExtensionValidator
 
 class Plant(models.Model):
-    plant_name = models.CharField(max_length=255)
-    plant_latin_name = models.CharField(max_length=255)
-    plant_image = models.ImageField(upload_to='images/', blank=True)
+    plant_name = models.CharField(max_length=255, validators=[MaxLengthValidator(255), MinLengthValidator(3)])
+    plant_latin_name = models.CharField(max_length=255, validators=[MaxLengthValidator(255), MinLengthValidator(3)])
+    plant_image = models.ImageField(upload_to='images/', blank=True, validators=[FileExtensionValidator(['jpg', 'png', 'jpeg', 'webp'])])
     plant_description = models.CharField(max_length=1000, null=True,
                                          blank=True)
     family = models.ForeignKey('backend.Family', on_delete=models.RESTRICT)
@@ -26,7 +26,7 @@ class Plant(models.Model):
 
 class Genus(models.Model):
 
-    genus = models.CharField(max_length=255, primary_key=True)
+    genus = models.CharField(max_length=255, primary_key=True, )
     genus_description = models.CharField(max_length=1000, null=True,
                                          blank=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
@@ -44,7 +44,7 @@ class Genus(models.Model):
 
 class Family(models.Model):
 
-    family = models.CharField(max_length=255, primary_key=True)
+    family = models.CharField(max_length=255, primary_key=True, validators=[MaxLengthValidator(255), MinLengthValidator(3)])
     family_description = models.CharField(max_length=1000, null=True,
                                           blank=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
@@ -194,23 +194,23 @@ class Edible(models.Model):
     is_fruit_edible = models.CharField(choices=Edibility.choices,
                                        default=Edibility.__empty__,
                                        max_length=3)
-    fruit_image = models.ImageField(upload_to='images/', blank=True)
+    fruit_image = models.ImageField(upload_to='images/', blank=True, validators=[FileExtensionValidator(['jpg', 'png', 'jpeg', 'webp'])])
     are_leaves_edible = models.CharField(choices=Edibility.choices,
                                          default=Edibility.__empty__,
                                          max_length=3)
-    leaf_image = models.ImageField(upload_to='images/', blank=True)
+    leaf_image = models.ImageField(upload_to='images/', blank=True, validators=[FileExtensionValidator(['jpg', 'png', 'jpeg', 'webp'])])
     are_roots_edible = models.CharField(choices=Edibility.choices,
                                         default=Edibility.__empty__,
                                         max_length=3)
-    root_image = models.ImageField(upload_to='images/', blank=True)
+    root_image = models.ImageField(upload_to='images/', blank=True, validators=[FileExtensionValidator(['jpg', 'png', 'jpeg', 'webp'])])
     are_flowers_edible = models.CharField(choices=Edibility.choices,
                                           default=Edibility.__empty__,
                                           max_length=3)
-    flower_image = models.ImageField(upload_to='images/', blank=True)
+    flower_image = models.ImageField(upload_to='images/', blank=True, validators=[FileExtensionValidator(['jpg', 'png', 'jpeg', 'webp'])])
     are_seeds_edible = models.CharField(choices=Edibility.choices,
                                         default=Edibility.__empty__,
                                         max_length=3)
-    seed_image = models.ImageField(upload_to='images/', blank=True)
+    seed_image = models.ImageField(upload_to='images/', blank=True, validators=[FileExtensionValidator(['jpg', 'png', 'jpeg', 'webp'])])
     edible_description = models.CharField(max_length=1000)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
 
