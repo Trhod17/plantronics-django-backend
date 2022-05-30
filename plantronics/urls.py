@@ -4,7 +4,7 @@ from rest_framework import routers
 from backend import views
 from django_otp.admin import OTPAdminSite
 
-#admin.site.__class__ = OTPAdminSite
+admin.site.__class__ = OTPAdminSite
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet, basename='users')
