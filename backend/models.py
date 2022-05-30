@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
-from django.core.validators import MinValueValidator, MinLengthValidator, MaxValueValidator, MaxLengthValidator, FileExtensionValidator
+from django.core.validators import MinLengthValidator, MaxLengthValidator, FileExtensionValidator
 
 class Plant(models.Model):
     plant_name = models.CharField(max_length=255, validators=[MaxLengthValidator(255), MinLengthValidator(3)])
