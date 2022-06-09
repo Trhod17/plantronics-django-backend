@@ -236,8 +236,8 @@ REST_FRAMEWORK = {
         'plantronics.throttles.SustainedRateThrottle'
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'burst': '4/second',
-        'sustained': '1000/day'
+        'burst': '2/second',
+        'sustained': '500/day'
     },
     'DEFAULT_PERMISSION_CLASSES': (
         'plantronics.safelistpermission.SafeListPermission',
