@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 OTP_TOTP_ISSUER = 'Plantronics'
@@ -327,6 +327,9 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
+   #'127.0.0.1',
+   #'localhost',
+	'https://plantronics-plant-app.netlify.app',
     'http://138.44.128.242',
     'http://172.30.211.17',
     'https://138.44.128.242',
@@ -334,11 +337,14 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 REST_SAFE_LIST_IPS = [
+   #'127.0.0.1',
+   #'localhost',
+	'https://plantronics-plant-app.netlify.app',
     '138.44.128.242',
     '172.30.211.17'     # tafe address in an attempt to be able to connect to the backend
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
     "DELETE",
@@ -351,6 +357,8 @@ CORS_ALLOW_METHODS = [
 
 IP_PROTECTED_NAMESPACES = ["admin"]
 IP_NETWORKS_WHITELIST = [
+	#'127.0.0.1',
+	#'localhost',
     '138.44.128.242',
 ]
 
