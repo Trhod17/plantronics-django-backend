@@ -327,10 +327,6 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'http://localhost:8000',
-    'http://127.0.0.1:8000',
     'http://138.44.128.242',
     'http://172.30.211.17',
     'https://138.44.128.242',
@@ -338,11 +334,6 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 REST_SAFE_LIST_IPS = [
-    '127.0.0.1',
-    '123.45.67.89',   # example IP
-    '192.168.0.',
-    'localhost:3000',
-    '127.0.0.1:3000',
     '138.44.128.242',
     '172.30.211.17'     # tafe address in an attempt to be able to connect to the backend
 ]
@@ -360,10 +351,6 @@ CORS_ALLOW_METHODS = [
 
 IP_PROTECTED_NAMESPACES = ["admin"]
 IP_NETWORKS_WHITELIST = [
-    '127.0.0.1',
-    '192.168.0',
-    '127.0.0.1',
-    '127.0.0.1',
     '138.44.128.242',
 ]
 
