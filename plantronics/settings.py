@@ -360,6 +360,7 @@ IP_NETWORKS_WHITELIST = [
 	#'127.0.0.1',
 	#'localhost',
     '138.44.128.242',
+	'58.96.36.248',
 ]
 
 import django_heroku
